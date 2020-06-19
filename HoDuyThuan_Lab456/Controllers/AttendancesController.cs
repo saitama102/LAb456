@@ -16,7 +16,7 @@ namespace HoDuyThuan_Lab456.Controllers
         {
             _dbContext = new ApplicationDbContext();
         }
-        [HttpPost]
+       
         
     }
 }
