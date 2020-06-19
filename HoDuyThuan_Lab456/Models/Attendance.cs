@@ -17,5 +17,6 @@ namespace HoDuyThuan_Lab456.Models
         [Key]
         [Column(Order = 2)]
         public string AttendeeId { get; set; }
+        public int CourseId { get; internal set; }
     }
 }
