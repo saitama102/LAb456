@@ -1,6 +1,6 @@
 ﻿using HoDuyThuan_Lab456.Models;
-using HoDuyThuan_Lab456.Views.ViewModels;
 using Microsoft.AspNet.Identity;
+using HoDuyThuan_Lab456.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace HoDuyThuan_Lab456.Controllers
     public class CoursesController : Controller
     {
         public readonly ApplicationDbContext _dbContext;
-        private object vewModel;
+
 
         public CoursesController()
         {
@@ -29,6 +29,7 @@ namespace HoDuyThuan_Lab456.Controllers
         }
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CourseViewModel viewModel)
         {   if(!ModelState.IsValid)
             {

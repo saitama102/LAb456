@@ -5,14 +5,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HoDuyThuan_Lab456.Views.ViewModels
+namespace HoDuyThuan_Lab456.ViewModels
 {
     public class CourseViewModel
-    {   [required]
+    {
+        [required]
         public string Place { get; set; }
         [required]
         [FutureDate]
         public string Date { get; set; }
+        [ValidTime ]
         [required]
         public string Time { get; set; }
         [required]
